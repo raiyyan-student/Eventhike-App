@@ -1,38 +1,698 @@
-.App {
+/* LandingPage.css */
+
+.landing-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.hero-section {
+  background: url('https://sandemanevents.com/wp-content/uploads/2018/11/slide2.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+  max-width: 600px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.featured-events {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.featured-events h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.event-cards {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+}
+
+.event-info h3 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.event-info p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.event-categories {
+  padding: 50px 20px;
+}
+
+.event-categories h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+}
+
+.category {
+  text-align: center;
+}
+
+.category i {
+  font-size: 40px;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.category p {
+  font-size: 18px;
+}
+
+.cta-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #3498db;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cta-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: #3498db;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cta-button:hover {
+  background-color: #2980b9;
+  color: white;
+}
+
+
+/* src/components/EventListingPage.css */
+
+.event-listing-page {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 18%;
+}
+
+.event-cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.event-card {
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+}
+
+.event-info h3 {
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.event-info p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.view-details-button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+  background-color: #2980b9;
+}
+
+.pagination-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #3498db;
+  background-color: white;
+  color: #3498db;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+
+/* src/components/EventDetailsPage.css */
+
+.event-details-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+.event-banner {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.event-banner-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.event-banner h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.event-banner p {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.event-info {
+  margin: 30px 0;
+}
+
+.event-info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.event-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.ticket-options {
+  margin: 30px 0;
+}
+
+.ticket-options h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.ticket-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.ticket-option p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.purchase-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.purchase-button:hover {
+  background-color: #2980b9;
+}
+
+.event-map {
+  margin: 30px 0;
+}
+
+.event-map h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.related-events {
+  margin: 30px 0;
+}
+
+.related-events h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.related-event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.related-event-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.related-event-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.related-event-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.user-reviews {
+  margin: 30px 0;
+}
+
+.user-reviews h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.review {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.review p {
+  margin: 5px 0;
+}
+
+.review strong {
+  font-size: 18px;
+}
+
+
+/* src/components/EventCreationPage.css */
+
+.event-creation-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.event-form input, .event-form textarea {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.event-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+.event-preview {
+  margin-top: 40px;
+}
+
+.event-preview h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.preview-banner {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.preview-banner h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.preview-banner p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.preview-details {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-details p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+
+/* src/components/UserAccountPage.css */
+
+.user-account-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+.profile-management, .event-dashboard, .saved-events {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.profile-management form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-management label {
+  font-size: 18px;
+}
+
+.profile-management input {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.event-list, .saved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-card, .saved-card {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3, .saved-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.event-card p, .saved-card p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.event-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.event-card button:hover {
+  background-color: #2980b9;
+}
+
+
+/* src/components/AdminPanel.css */
+
+.admin-panel {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+.dashboard-overview, .event-management, .user-management, .analytics {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.overview-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 26px;
+  color: #3498db;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+}
+
+table td button {
+  margin-right: 10px;
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+  background-color: #2980b9;
+}
+
+.analytics-charts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.chart-placeholder {
+  background-color: #e0e0e0;
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
 }
